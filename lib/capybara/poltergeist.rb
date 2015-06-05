@@ -23,5 +23,5 @@ module Capybara
 end
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app)
+  Capybara::Poltergeist::Driver.new(app, :phantomjs_options=>['--load-images=false'])
 end

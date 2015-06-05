@@ -38,7 +38,7 @@ module Capybara::Poltergeist
 
       @window_size       = options[:window_size]       || [1024, 768]
       @phantomjs_options = options[:phantomjs_options] || []
-      @phantomjs_logger  = options[:phantomjs_logger]  || $stdout
+      @phantomjs_logger  = options[:phantomjs_logger]  || $stderr
 
       pid = Process.pid
       at_exit do
